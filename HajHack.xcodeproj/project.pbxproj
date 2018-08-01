@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		454E392B3AF64FD6981D7383 /* Pods_HajHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41B28DB472E3E51CA408EC0 /* Pods_HajHack.framework */; };
+		9FC43DAF2111C43E0083BD9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DAE2111C43E0083BD9B /* AppDelegate.swift */; };
+		9FC43DB12111C43E0083BD9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DB02111C43E0083BD9B /* ViewController.swift */; };
+		9FC43DB42111C43E0083BD9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC43DB22111C43E0083BD9B /* Main.storyboard */; };
+		9FC43DB72111C43E0083BD9B /* HajHack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DB52111C43E0083BD9B /* HajHack.xcdatamodeld */; };
+		9FC43DB92111C43E0083BD9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC43DB82111C43E0083BD9B /* Assets.xcassets */; };
+		9FC43DBC2111C43E0083BD9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC43DBA2111C43E0083BD9B /* LaunchScreen.storyboard */; };
+		9FC43DC52111EEE60083BD9B /* MissingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DC42111EEE60083BD9B /* MissingViewController.swift */; };
+		9FC43DC72111EEF90083BD9B /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DC62111EEF90083BD9B /* NotificationsViewController.swift */; };
+		9FC43DC92111FA190083BD9B /* MissingPilgrimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DC82111FA190083BD9B /* MissingPilgrimage.swift */; };
+		9FC43DCB211201260083BD9B /* PDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DCA211201260083BD9B /* PDetailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5350F2432CFE9C7AD6505995 /* Pods-HajHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HajHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HajHack/Pods-HajHack.debug.xcconfig"; sourceTree = "<group>"; };
+		9FC43DAB2111C43E0083BD9B /* HajHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HajHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC43DAE2111C43E0083BD9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FC43DB02111C43E0083BD9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FC43DB32111C43E0083BD9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FC43DB62111C43E0083BD9B /* HajHack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HajHack.xcdatamodel; sourceTree = "<group>"; };
+		9FC43DB82111C43E0083BD9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FC43DBB2111C43E0083BD9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FC43DBD2111C43E0083BD9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC43DC32111C5070083BD9B /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ObjCBridge.h; path = HajHack/ObjCBridge.h; sourceTree = "<group>"; };
+		9FC43DC42111EEE60083BD9B /* MissingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingViewController.swift; sourceTree = "<group>"; };
+		9FC43DC62111EEF90083BD9B /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		9FC43DC82111FA190083BD9B /* MissingPilgrimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPilgrimage.swift; sourceTree = "<group>"; };
+		9FC43DCA211201260083BD9B /* PDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDetailViewController.swift; sourceTree = "<group>"; };
+		B010CA88B99D142EE09B46A5 /* Pods-HajHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HajHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-HajHack/Pods-HajHack.release.xcconfig"; sourceTree = "<group>"; };
+		B41B28DB472E3E51CA408EC0 /* Pods_HajHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HajHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FC43DA82111C43E0083BD9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				454E392B3AF64FD6981D7383 /* Pods_HajHack.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EB46F7BC8305F72CFF1E983 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B41B28DB472E3E51CA408EC0 /* Pods_HajHack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80E5B1D936A158CEEB2D7ED1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5350F2432CFE9C7AD6505995 /* Pods-HajHack.debug.xcconfig */,
+				B010CA88B99D142EE09B46A5 /* Pods-HajHack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9FC43DA22111C43E0083BD9B = {
+			isa = PBXGroup;
+			children = (
+				9FC43DC32111C5070083BD9B /* ObjCBridge.h */,
+				9FC43DAD2111C43E0083BD9B /* HajHack */,
+				9FC43DAC2111C43E0083BD9B /* Products */,
+				80E5B1D936A158CEEB2D7ED1 /* Pods */,
+				2EB46F7BC8305F72CFF1E983 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9FC43DAC2111C43E0083BD9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FC43DAB2111C43E0083BD9B /* HajHack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FC43DAD2111C43E0083BD9B /* HajHack */ = {
+			isa = PBXGroup;
+			children = (
+				9FC43DAE2111C43E0083BD9B /* AppDelegate.swift */,
+				9FC43DB02111C43E0083BD9B /* ViewController.swift */,
+				9FC43DB22111C43E0083BD9B /* Main.storyboard */,
+				9FC43DCA211201260083BD9B /* PDetailViewController.swift */,
+				9FC43DC42111EEE60083BD9B /* MissingViewController.swift */,
+				9FC43DC82111FA190083BD9B /* MissingPilgrimage.swift */,
+				9FC43DC62111EEF90083BD9B /* NotificationsViewController.swift */,
+				9FC43DB82111C43E0083BD9B /* Assets.xcassets */,
+				9FC43DBA2111C43E0083BD9B /* LaunchScreen.storyboard */,
+				9FC43DBD2111C43E0083BD9B /* Info.plist */,
+				9FC43DB52111C43E0083BD9B /* HajHack.xcdatamodeld */,
+			);
+			path = HajHack;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FC43DAA2111C43E0083BD9B /* HajHack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FC43DC02111C43E0083BD9B /* Build configuration list for PBXNativeTarget "HajHack" */;
+			buildPhases = (
+				64801BC676670A8E8BE5B0C4 /* [CP] Check Pods Manifest.lock */,
+				9FC43DA72111C43E0083BD9B /* Sources */,
+				9FC43DA82111C43E0083BD9B /* Frameworks */,
+				9FC43DA92111C43E0083BD9B /* Resources */,
+				500270DF5B8F10EC93681FCB /* [CP] Embed Pods Frameworks */,
+				913B8E4C1231151491C642DA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HajHack;
+			productName = HajHack;
+			productReference = 9FC43DAB2111C43E0083BD9B /* HajHack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FC43DA32111C43E0083BD9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Dalal;
+				TargetAttributes = {
+					9FC43DAA2111C43E0083BD9B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9FC43DA62111C43E0083BD9B /* Build configuration list for PBXProject "HajHack" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FC43DA22111C43E0083BD9B;
+			productRefGroup = 9FC43DAC2111C43E0083BD9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FC43DAA2111C43E0083BD9B /* HajHack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FC43DA92111C43E0083BD9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC43DBC2111C43E0083BD9B /* LaunchScreen.storyboard in Resources */,
+				9FC43DB92111C43E0083BD9B /* Assets.xcassets in Resources */,
+				9FC43DB42111C43E0083BD9B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		500270DF5B8F10EC93681FCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HajHack/Pods-HajHack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64801BC676670A8E8BE5B0C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HajHack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		913B8E4C1231151491C642DA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HajHack/Pods-HajHack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FC43DA72111C43E0083BD9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC43DC72111EEF90083BD9B /* NotificationsViewController.swift in Sources */,
+				9FC43DB12111C43E0083BD9B /* ViewController.swift in Sources */,
+				9FC43DB72111C43E0083BD9B /* HajHack.xcdatamodeld in Sources */,
+				9FC43DAF2111C43E0083BD9B /* AppDelegate.swift in Sources */,
+				9FC43DC52111EEE60083BD9B /* MissingViewController.swift in Sources */,
+				9FC43DCB211201260083BD9B /* PDetailViewController.swift in Sources */,
+				9FC43DC92111FA190083BD9B /* MissingPilgrimage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9FC43DB22111C43E0083BD9B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FC43DB32111C43E0083BD9B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FC43DBA2111C43E0083BD9B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FC43DBB2111C43E0083BD9B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FC43DBE2111C43E0083BD9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9FC43DBF2111C43E0083BD9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FC43DC12111C43E0083BD9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5350F2432CFE9C7AD6505995 /* Pods-HajHack.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3776PW29;
+				INFOPLIST_FILE = HajHack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alharbi.HajHack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FC43DC22111C43E0083BD9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B010CA88B99D142EE09B46A5 /* Pods-HajHack.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJ3776PW29;
+				INFOPLIST_FILE = HajHack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = alharbi.HajHack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FC43DA62111C43E0083BD9B /* Build configuration list for PBXProject "HajHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC43DBE2111C43E0083BD9B /* Debug */,
+				9FC43DBF2111C43E0083BD9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FC43DC02111C43E0083BD9B /* Build configuration list for PBXNativeTarget "HajHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC43DC12111C43E0083BD9B /* Debug */,
+				9FC43DC22111C43E0083BD9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9FC43DB52111C43E0083BD9B /* HajHack.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9FC43DB62111C43E0083BD9B /* HajHack.xcdatamodel */,
+			);
+			currentVersion = 9FC43DB62111C43E0083BD9B /* HajHack.xcdatamodel */;
+			path = HajHack.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9FC43DA32111C43E0083BD9B /* Project object */;
+}
