@@ -9,8 +9,25 @@
 import Foundation
 import UIKit
 
-class MissingPilgrimage{
+struct MissingPilgrimage{
     var name:String?
     var period:String?
     var image:UIImage?
+}
+
+
+struct  PMessage{
+    var message:String?
+    var name:String?
+    var image:UIImage?
+    var read:Bool?
+}
+
+struct  MessageUpdate{
+    var name:String?
+    var date:String?
+    var image:UIImage?
+    var message:String?
+    var time:String?
+    
 }

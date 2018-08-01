@@ -18,6 +18,10 @@
 		9FC43DC72111EEF90083BD9B /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DC62111EEF90083BD9B /* NotificationsViewController.swift */; };
 		9FC43DC92111FA190083BD9B /* MissingPilgrimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DC82111FA190083BD9B /* MissingPilgrimage.swift */; };
 		9FC43DCB211201260083BD9B /* PDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DCA211201260083BD9B /* PDetailViewController.swift */; };
+		9FC43DCD211226EC0083BD9B /* AllMessgaesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DCC211226EC0083BD9B /* AllMessgaesViewController.swift */; };
+		9FC43DD0211227890083BD9B /* MessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DCF211227890083BD9B /* MessageCollectionViewCell.swift */; };
+		9FC43DD221123C2B0083BD9B /* MissingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DD121123C2B0083BD9B /* MissingCollectionViewCell.swift */; };
+		9FC43DD42112430F0083BD9B /* UpdateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DD32112430F0083BD9B /* UpdateCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,10 @@
 		9FC43DC62111EEF90083BD9B /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		9FC43DC82111FA190083BD9B /* MissingPilgrimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingPilgrimage.swift; sourceTree = "<group>"; };
 		9FC43DCA211201260083BD9B /* PDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDetailViewController.swift; sourceTree = "<group>"; };
+		9FC43DCC211226EC0083BD9B /* AllMessgaesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMessgaesViewController.swift; sourceTree = "<group>"; };
+		9FC43DCF211227890083BD9B /* MessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FC43DD121123C2B0083BD9B /* MissingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissingCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FC43DD32112430F0083BD9B /* UpdateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCollectionViewCell.swift; sourceTree = "<group>"; };
 		B010CA88B99D142EE09B46A5 /* Pods-HajHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HajHack.release.xcconfig"; path = "Pods/Target Support Files/Pods-HajHack/Pods-HajHack.release.xcconfig"; sourceTree = "<group>"; };
 		B41B28DB472E3E51CA408EC0 /* Pods_HajHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HajHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +98,7 @@
 		9FC43DAD2111C43E0083BD9B /* HajHack */ = {
 			isa = PBXGroup;
 			children = (
+				9FC43DCE2112273B0083BD9B /* cell */,
 				9FC43DAE2111C43E0083BD9B /* AppDelegate.swift */,
 				9FC43DB02111C43E0083BD9B /* ViewController.swift */,
 				9FC43DB22111C43E0083BD9B /* Main.storyboard */,
@@ -101,8 +110,19 @@
 				9FC43DBA2111C43E0083BD9B /* LaunchScreen.storyboard */,
 				9FC43DBD2111C43E0083BD9B /* Info.plist */,
 				9FC43DB52111C43E0083BD9B /* HajHack.xcdatamodeld */,
+				9FC43DCC211226EC0083BD9B /* AllMessgaesViewController.swift */,
 			);
 			path = HajHack;
+			sourceTree = "<group>";
+		};
+		9FC43DCE2112273B0083BD9B /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				9FC43DCF211227890083BD9B /* MessageCollectionViewCell.swift */,
+				9FC43DD121123C2B0083BD9B /* MissingCollectionViewCell.swift */,
+				9FC43DD32112430F0083BD9B /* UpdateCollectionViewCell.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +251,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FC43DD42112430F0083BD9B /* UpdateCollectionViewCell.swift in Sources */,
 				9FC43DC72111EEF90083BD9B /* NotificationsViewController.swift in Sources */,
 				9FC43DB12111C43E0083BD9B /* ViewController.swift in Sources */,
+				9FC43DD0211227890083BD9B /* MessageCollectionViewCell.swift in Sources */,
+				9FC43DD221123C2B0083BD9B /* MissingCollectionViewCell.swift in Sources */,
+				9FC43DCD211226EC0083BD9B /* AllMessgaesViewController.swift in Sources */,
 				9FC43DB72111C43E0083BD9B /* HajHack.xcdatamodeld in Sources */,
 				9FC43DAF2111C43E0083BD9B /* AppDelegate.swift in Sources */,
 				9FC43DC52111EEE60083BD9B /* MissingViewController.swift in Sources */,
