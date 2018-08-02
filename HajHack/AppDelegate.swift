@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import  UserNotifications
+import Alamofire
 
 struct Beacon{
     var iceUUID:String
@@ -70,7 +71,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate , ESTBeaconManagerDelegate
         
     
         showNotification(with: " دخول حاج", body: "\(region.identifier) تم تسجيل دخولة داخل نطاق المخيم")
+      
+            
+        var url = "http://192.168.8.101:8080/users/updateLocations"
+        
+        let parameters: Parameters = [
+            "lat": 21.61749207451767,
+            "lon": 39.15538886498189,
+            "beaconsIds" : [
+                "e35eefc61a93",
+                "d640cd95516a",
+                "dcabc717ed9e"
+            ]
+        ]
+            
+            
+        Alamofire.request(url, method: .post,parameters: parameters,  encoding: JSONEncoding.default,headers:["Content-Type": "application/json",
+            "Cache-Control": "no-cache",
+            "Postman-Token": "2bb6d09f-4595-450e-b3bf-0998012c393b"])
+                .responseJSON {[unowned self] response in
+                    print("Success0")
+                    switch response.result {
+                    case .success(let json):
+                        print("Success1")
+                        if let data = json as? [String: Any] {
+                            print("Success2")
+                            if let success =  data["success"] as? Int{
+                                
+                                if success == 1 {
+                                    print("Success3")
+                                 
+                                    
+                                }else{
+                                   print("Errror0")
+                                    //completionHandler(Constants.RESPONSE_FAIL_STATUS_CODE,nil,data["message"] as! String )
+                                }
+                                
+                                
+                            }else {
+                                print("Errror1")
+//                                completionHandler(Constants.RESPONSE_FAIL_STATUS_CODE,nil,data["message"] as! String)
+                                
+                            }
+                            
+                            
+                        }
+                        
+                        
+                    case .failure(let err):
+                        
+                        print(err)
+                    }
+                    
+            }
     }
+        
+    
     
     func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
         print("Did exit region \(region)")

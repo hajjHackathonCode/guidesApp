@@ -1,12 +1,18 @@
 PODS:
+  - Alamofire (4.7.1)
   - EstimoteSDK (4.27.0)
+  - Kingfisher (4.7.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - EstimoteSDK
+  - Kingfisher (~> 4.0)
 
 SPEC CHECKSUMS:
+  Alamofire: 68d7d521118d49c615a8d2214d87cdf525599d30
   EstimoteSDK: 61935c7fbcb9fe93b97b0360351aef66fb1c338d
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
 
-PODFILE CHECKSUM: b4a2fb97d6e6515a0faf1a01ccaecdb733b49484
+PODFILE CHECKSUM: c6ec5c908623df613c2cbf8e0112ca76ad33d158
 
 COCOAPODS: 1.4.0

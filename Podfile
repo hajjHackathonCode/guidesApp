@@ -7,5 +7,6 @@ target 'HajHack' do
 
   # Pods for HajHack
 pod 'EstimoteSDK'
-
+ pod 'Alamofire', '~> 4.7’
+ pod 'Kingfisher', '~> 4.0’
 end
