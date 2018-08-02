@@ -10,12 +10,32 @@ import UIKit
 import CoreData
 import  UserNotifications
 
+struct Beacon{
+    var iceUUID:String
+    var name:String
+    var major:NSNumber
+    var minor:NSNumber
+    
+    
+}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate , ESTBeaconManagerDelegate{
 
     var window: UIWindow?
     
     let beaconManager = ESTBeaconManager()
+    
+    let becacons = [Beacon(iceUUID:"B9407F30-F5F8-466E-AFF9-25556B57FE33",
+    name:"عبدالله",
+    major:6803,
+    minor:61382),Beacon(iceUUID:"B9407F30-F5F8-466E-AFF9-25556B57FE11",
+                        name:"محمد",
+                        major:20842,
+                        minor:52629),Beacon(iceUUID:"B9407F30-F5F8-466E-AFF9-25556B57FE22",
+                                            name:"وليد",
+                                            major:60830,
+                                            minor:50967)
+       ]
     
     let iceUUID = "B9407F30-F5F8-466E-AFF9-25556B57FE6D"
     
@@ -25,9 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate , ESTBeaconManagerDelegate
         self.beaconManager.delegate = self
         self.beaconManager.requestAlwaysAuthorization()
         
-        self.beaconManager.startMonitoring(for: CLBeaconRegion(
-            proximityUUID: UUID(uuidString: iceUUID)!,
-           major: 6803, minor: 61382, identifier: "monitored region"))
+        for b in becacons{
+            self.beaconManager.startMonitoring(for: CLBeaconRegion(
+                proximityUUID: UUID(uuidString: b.iceUUID)!,
+                major: CLBeaconMajorValue(b.major), minor: CLBeaconMinorValue(b.minor), identifier: b.name))
+        }
+        
         
       
         let center = UNUserNotificationCenter.current()
@@ -44,12 +67,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate , ESTBeaconManagerDelegate
     }
     func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
         print("We entered the region!")
-        showNotification(with: "Entered", body: "We entered  the region")
+        
+    
+        showNotification(with: " دخول حاج", body: "\(region.identifier) تم تسجيل دخولة داخل نطاق المخيم")
     }
     
     func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
         print("Did exit region \(region)")
-        showNotification(with: "Exit", body: "Did exit region")
+        showNotification(with: "فقد حاج", body: "\(region.identifier) ابتعد عن المخيم")
     }
     
     func showNotification(with title: String, body: String) {
