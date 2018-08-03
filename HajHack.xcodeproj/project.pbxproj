@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		454E392B3AF64FD6981D7383 /* Pods_HajHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B41B28DB472E3E51CA408EC0 /* Pods_HajHack.framework */; };
+		9F00204F2113628900B6EEF5 /* ServerManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00204E2113628900B6EEF5 /* ServerManger.swift */; };
 		9FC43DAF2111C43E0083BD9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DAE2111C43E0083BD9B /* AppDelegate.swift */; };
 		9FC43DB12111C43E0083BD9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC43DB02111C43E0083BD9B /* ViewController.swift */; };
 		9FC43DB42111C43E0083BD9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC43DB22111C43E0083BD9B /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		5350F2432CFE9C7AD6505995 /* Pods-HajHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HajHack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HajHack/Pods-HajHack.debug.xcconfig"; sourceTree = "<group>"; };
+		9F00204E2113628900B6EEF5 /* ServerManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManger.swift; sourceTree = "<group>"; };
 		9FC43DAB2111C43E0083BD9B /* HajHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HajHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC43DAE2111C43E0083BD9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FC43DB02111C43E0083BD9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				9FC43DBD2111C43E0083BD9B /* Info.plist */,
 				9FC43DB52111C43E0083BD9B /* HajHack.xcdatamodeld */,
 				9FC43DCC211226EC0083BD9B /* AllMessgaesViewController.swift */,
+				9F00204E2113628900B6EEF5 /* ServerManger.swift */,
 			);
 			path = HajHack;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				9FC43DD42112430F0083BD9B /* UpdateCollectionViewCell.swift in Sources */,
 				9FC43DC72111EEF90083BD9B /* NotificationsViewController.swift in Sources */,
+				9F00204F2113628900B6EEF5 /* ServerManger.swift in Sources */,
 				9FC43DB12111C43E0083BD9B /* ViewController.swift in Sources */,
 				9FC43DD0211227890083BD9B /* MessageCollectionViewCell.swift in Sources */,
 				9FC43DD221123C2B0083BD9B /* MissingCollectionViewCell.swift in Sources */,

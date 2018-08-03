@@ -16,6 +16,8 @@ struct Beacon{
     var name:String
     var major:NSNumber
     var minor:NSNumber
+    var idnteifire:String
+    
     
     
 }
@@ -26,19 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate , ESTBeaconManagerDelegate
     
     let beaconManager = ESTBeaconManager()
     
-    let becacons = [Beacon(iceUUID:"B9407F30-F5F8-466E-AFF9-25556B57FE33",
+    let becacons = [Beacon(iceUUID:"B9407F30-F5F8-466E-AFF9-25556B57FE22",
     name:"عبدالله",
     major:6803,
-    minor:61382),Beacon(iceUUID:"B9407F30-F5F8-466E-AFF9-25556B57FE11",
-                        name:"محمد",
-                        major:20842,
-                        minor:52629),Beacon(iceUUID:"B9407F30-F5F8-466E-AFF9-25556B57FE22",
-                                            name:"وليد",
-                                            major:60830,
-                                            minor:50967)
+    minor:61382,idnteifire:"dcabc717ed9e")
        ]
     
-    let iceUUID = "B9407F30-F5F8-466E-AFF9-25556B57FE6D"
+   
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -49,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , ESTBeaconManagerDelegate
         for b in becacons{
             self.beaconManager.startMonitoring(for: CLBeaconRegion(
                 proximityUUID: UUID(uuidString: b.iceUUID)!,
-                major: CLBeaconMajorValue(b.major), minor: CLBeaconMinorValue(b.minor), identifier: b.name))
+                major: CLBeaconMajorValue(b.major), minor: CLBeaconMinorValue(b.minor), identifier: b.idnteifire))
         }
         
         
@@ -66,73 +62,120 @@ class AppDelegate: UIResponder, UIApplicationDelegate , ESTBeaconManagerDelegate
         
         return true
     }
-    func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
-        print("We entered the region!")
-        
-    
-        showNotification(with: " دخول حاج", body: "\(region.identifier) تم تسجيل دخولة داخل نطاق المخيم")
-      
-            
-        var url = "http://192.168.8.101:8080/users/updateLocations"
-        
-        let parameters: Parameters = [
-            "lat": 21.61749207451767,
-            "lon": 39.15538886498189,
-            "beaconsIds" : [
-                "e35eefc61a93",
-                "d640cd95516a",
-                "dcabc717ed9e"
-            ]
-        ]
-            
-            
-        Alamofire.request(url, method: .post,parameters: parameters,  encoding: JSONEncoding.default,headers:["Content-Type": "application/json",
-            "Cache-Control": "no-cache",
-            "Postman-Token": "2bb6d09f-4595-450e-b3bf-0998012c393b"])
-                .responseJSON {[unowned self] response in
-                    print("Success0")
-                    switch response.result {
-                    case .success(let json):
-                        print("Success1")
-                        if let data = json as? [String: Any] {
-                            print("Success2")
-                            if let success =  data["success"] as? Int{
-                                
-                                if success == 1 {
-                                    print("Success3")
-                                 
-                                    
-                                }else{
-                                   print("Errror0")
-                                    //completionHandler(Constants.RESPONSE_FAIL_STATUS_CODE,nil,data["message"] as! String )
-                                }
-                                
-                                
-                            }else {
-                                print("Errror1")
-//                                completionHandler(Constants.RESPONSE_FAIL_STATUS_CODE,nil,data["message"] as! String)
-                                
-                            }
-                            
-                            
-                        }
-                        
-                        
-                    case .failure(let err):
-                        
-                        print(err)
-                    }
-                    
-            }
-    }
-        
-    
-    
-    func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
-        print("Did exit region \(region)")
-        showNotification(with: "فقد حاج", body: "\(region.identifier) ابتعد عن المخيم")
-    }
-    
+//    func beaconManager(_ manager: Any, didEnter region: CLBeaconRegion) {
+//        print("We entered the region!")
+//        showNotification(with: " دخول حاج", body: "تم تسجيل دخول \(region.identifier) داخل نطاق المخيم")
+//        var url =
+//
+//        let parameters: Parameters = [
+//            "lat": 21.61749207451767,
+//            "lon": 39.15538886498189,
+//            "dir": "in",
+//            "beaconsIds" : [
+//               region.identifier
+//            ]
+//        ]
+//
+//
+//        Alamofire.request(url, method: .post,parameters: parameters,  encoding: JSONEncoding.default,headers:["Content-Type": "application/json",
+//            "Cache-Control": "no-cache",
+//            "Postman-Token": "2bb6d09f-4595-450e-b3bf-0998012c393b"])
+//                .responseJSON {[unowned self] response in
+//                    print("Success0")
+//                    switch response.result {
+//                    case .success(let json):
+//                        print("Success1")
+//                        if let data = json as? [String: Any] {
+//                            print(data)
+//                            if let success =  data["response"] as? Int{
+//
+//                                if success == 1 {
+//                                    print("Success3")
+//
+//
+//                                }else{
+//                                   print("Errror0")
+//                                    //completionHandler(Constants.RESPONSE_FAIL_STATUS_CODE,nil,data["message"] as! String )
+//                                }
+//
+//
+//                            }else {
+//                                print("Errror1")
+////                                completionHandler(Constants.RESPONSE_FAIL_STATUS_CODE,nil,data["message"] as! String)
+//
+//                            }
+//
+//
+//                        }
+//
+//
+//                    case .failure(let err):
+//
+//                        print(err)
+//                    }
+//
+//            }
+//
+//        }
+//
+//
+//
+//
+//    func beaconManager(_ manager: Any, didExitRegion region: CLBeaconRegion) {
+//
+//        print("Did exit region \(region)")
+//        showNotification(with: "فقد حاج", body: "\(region.identifier) ابتعد عن المخيم")
+//        var url =
+//
+//        let parameters: Parameters = [
+//            "lat": 21.61749207451767,
+//            "lon": 39.15538886498189,
+//            "dir": "out",
+//            "beaconsIds" : [region.identifier
+//        ]]
+//
+//
+//        Alamofire.request(url, method: .post,parameters: parameters,  encoding: JSONEncoding.default,headers:["Content-Type": "application/json",
+//                                                                                                              "Cache-Control": "no-cache",
+//                                                                                                              "Postman-Token": "2bb6d09f-4595-450e-b3bf-0998012c393b"])
+//            .responseJSON {[unowned self] response in
+//                print("Success0")
+//                switch response.result {
+//                case .success(let json):
+//                    print("Success1")
+//                    if let data = json as? [String: Any] {
+//                        print(data)
+//                        if let success =  data["response"] as? Int{
+//
+//                            if success == 1 {
+//                                print("Success3")
+//
+//
+//                            }else{
+//                                print("Errror0")
+//                                //completionHandler(Constants.RESPONSE_FAIL_STATUS_CODE,nil,data["message"] as! String )
+//                            }
+//
+//
+//                        }else {
+//                            print("Errror1")
+//                            //                                completionHandler(Constants.RESPONSE_FAIL_STATUS_CODE,nil,data["message"] as! String)
+//
+//                        }
+//
+//
+//                    }
+//
+//
+//                case .failure(let err):
+//
+//                    print(err)
+//                }
+//
+//        }
+//
+//    }
+//
     func showNotification(with title: String, body: String) {
         let content = UNMutableNotificationContent()
         content.title = title

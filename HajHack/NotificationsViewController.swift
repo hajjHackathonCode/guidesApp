@@ -11,14 +11,16 @@ import UIKit
 class NotificationsViewController: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSource {
     
     @IBOutlet weak var messsagesTable: UICollectionView!
+    @IBOutlet weak var noNotifications: UILabel!
     
-    var messagesArray  = [PMessage(message: "أرجو توجيهه بالذهاب لمقر الحملة مباشرة ",name:"مشعل الحازمي",image:#imageLiteral(resourceName: "Bitmap"),read:true),PMessage(message:"أرجو توجيهه بالذهاب لمقر الحملة مباشرة",name:"دلال الحربي",image:#imageLiteral(resourceName: "Bitmap"),read:true),PMessage(message:"أرجو توجيهه بالذهاب لمقر الحملة مباشرة",name:"حسن ايوب",image:#imageLiteral(resourceName: "Bitmap"),read:true)]
+    var messagesArray  = [MessageUpdate]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         messsagesTable.delegate = self
         messsagesTable.dataSource = self
+        ServerManger.sharedInstance.getalllosts(completionHandler: listLostsHandler)
 
 
         // Do any additional setup after loading the view.
@@ -29,6 +31,21 @@ class NotificationsViewController: UIViewController ,UICollectionViewDelegate,UI
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
+    func listLostsHandler(missingP:[MissingPilgrimage]?){
+        if missingP?.count == 0 {
+            self.noNotifications.text = "لا يوجد تنبيهات حاليا "
+            
+            
+        }else{
+            self.messagesArray = missingP![0].informationHistory!
+            self.messsagesTable.reloadData()
+            
+        }
+        
+        
+    }
 
     
     

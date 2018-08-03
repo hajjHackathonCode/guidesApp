@@ -13,6 +13,8 @@ struct MissingPilgrimage{
     var name:String?
     var period:String?
     var image:UIImage?
+    var id:String?
+    var informationHistory:[MessageUpdate]?
 }
 
 

@@ -10,3 +10,13 @@ pod 'EstimoteSDK'
  pod 'Alamofire', '~> 4.7’
  pod 'Kingfisher', '~> 4.0’
 end
+
+
+POST http://198.211.119.242/HajjConnect/users/reportlostinfo
+
+Content-Type: application/json
+
+  {
+    "beaconId": "dcabc717ed9e",
+    "message":"لقد وجدت هذا الحاج و هوا لدي الان."
+  }

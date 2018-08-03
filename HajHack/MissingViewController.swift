@@ -10,19 +10,31 @@ import UIKit
 
 class MissingViewController: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSource{
 
-
-    @IBOutlet weak var MissingTable: UICollectionView!
-    var missingP : [MissingPilgrimage] = [MissingPilgrimage(name:"سالم خالد الأحمد ",period:"5 ساعات و 20 دقيقة",image:#imageLiteral(resourceName: "Bitmap")),MissingPilgrimage(name:"سالم خالد الأحمد ",period:"5 ساعات و 20 دقيقة",image:#imageLiteral(resourceName: "plus-circle"))]
+    @IBOutlet weak var noMissingLabel: UILabel!
     
+    @IBOutlet weak var MissingTable: UICollectionView!
+    var missingP : [MissingPilgrimage] = [MissingPilgrimage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         MissingTable.delegate = self
         MissingTable.dataSource = self
+        ServerManger.sharedInstance.getalllosts(completionHandler: listLostsHandler)
         
         
     }
 
+    func listLostsHandler(missingP:[MissingPilgrimage]?){
+        if missingP?.count == 0 {
+            self.noMissingLabel.text = "لا يوجد مفقوديين"
+        }else{
+            self.missingP = missingP!
+            self.MissingTable.reloadData()
+            
+        }
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -30,7 +42,14 @@ class MissingViewController: UIViewController ,UICollectionViewDelegate,UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detail", sender: nil)
+        performSegue(withIdentifier: "detail", sender: self.missingP[indexPath.row])
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? PDetailViewController{
+            viewController.missingP = sender as! MissingPilgrimage
+        }
     
     }
 
@@ -53,7 +72,7 @@ class MissingViewController: UIViewController ,UICollectionViewDelegate,UICollec
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return self.missingP.count
+        return self.missingP.count ?? 0
     }
     
     
